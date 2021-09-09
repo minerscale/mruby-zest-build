@@ -173,21 +173,21 @@ Widget {
 
     function onKey(k, act)
     {
-        qwerty_high = "q2w3er5t6y7ui9o0p[=]\\"
-        qwerty_low  = "zsxdcvgbhnjm,l.;/"
+        keyboard_left = "zxcdvarstgqwfpb12345"
+        keyboard_right  = "kh,./mneiojluy;67890"
 
         note = nil
         off = 0
-        qwerty_low.each_char do |i|
+        keyboard_left.each_char do |i|
             if(k==i)
-                note = 60 - 12 + off + self.octave*12
+                note = 60 + off
                 break
             end
             off += 1
         end
 
         off = 0
-        qwerty_high.each_char do |i|
+        keyboard_right.each_char do |i|
             if(k==i)
                 note = 60 + off
                 break
