@@ -180,7 +180,7 @@ Widget {
         off = 0
         keyboard_left.each_char do |i|
             if(k==i)
-                note = 60 + off
+                note = 40 + off
                 break
             end
             off += 1
